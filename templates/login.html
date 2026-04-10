@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="auth-body">
+
+    <div class="auth-container">
+
+        <h2>Welcome Back 👋</h2>
+        <p class="subtitle">Login or create an account</p>
+
+        <input type="text" id="name" placeholder="Full Name (Signup only)">
+        <input type="email" id="email" placeholder="Email address">
+        <input type="password" id="password" placeholder="Password">
+
+        <div class="auth-buttons">
+            <button class="signup-btn" onclick="signup()">Sign Up</button>
+            <button class="login-btn" onclick="login()">Login</button>
+        </div>
+
+        <!-- <button class="skip-btn" onclick="skipLogin()">Skip for now →</button> -->
+
+        <p id="authMessage"></p>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+   
+</body>
+</html>

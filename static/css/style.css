@@ -1,0 +1,294 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #c7d2fe, #dbeafe, #f0f9ff);
+    color: #222;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ================= GLASS ================= */
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* ================= GLASS BUTTONS ================= */
+.navbar button,
+.auth-buttons button,
+.profile-btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    color: #111;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.navbar button:hover,
+.auth-buttons button:hover,
+.profile-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Logout special */
+.logout-btn {
+    color: #ef4444;
+}
+
+/* ================= PROFILE PANEL ================= */
+.profile-panel {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    padding: 15px;
+    font-size: 0.85rem;
+    display: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.hero p {
+    margin-top: 8px;
+    color: #555;
+}
+
+/* ================= SEARCH ================= */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.search-box-input {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box-input input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255,255,255,0.6);
+    font-size: 15px;
+    outline: none;
+}
+
+.search-box-input button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* ================= RESULT ================= */
+.result-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.result-container.show {
+    display: flex;
+}
+
+.result-card {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.trust-score span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+/* Progress */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    margin: 8px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 20px;
+    transition: 0.8s;
+}
+
+.positive { background: #22c55e; }
+.negative { background: #ef4444; }
+
+/* ================= AUTHENTICITY ================= */
+.authenticity-card {
+    margin-top: 20px;
+}
+
+.auth-stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.auth-box {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.auth-box.real {
+    background: rgba(34,197,94,0.15);
+}
+
+.auth-box.fake {
+    background: rgba(239,68,68,0.15);
+}
+
+/* ================= LOADER ================= */
+.loading-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(0,0,0,0.1);
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    margin: auto;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ================= LOGIN PAGE ================= */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Card */
+.auth-container {
+    width: 90%;
+    max-width: 350px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Inputs */
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Buttons group */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Skip button */
+.skip-btn {
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .auth-stats {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box-input input {
+        font-size: 14px;
+    }
+}
