@@ -85,8 +85,8 @@ if (searchBtn && input) {
 
             // Recommendation logic
             if (data.trust >= 80) {
-                recommendText.innerHTML = "✅ Highly Recommended";
-            } else if (data.trust >= 60) {
+                recommendText.innerHTML = "⭐  Highly Recommended";
+            } else if (data.trust >= 60 && data.trust < 80) {
                 recommendText.innerHTML = "✅ Recommended to Buy";
             } else if (data.trust >= 40) {
                 recommendText.innerHTML = "⚠️ Mixed Reviews";
